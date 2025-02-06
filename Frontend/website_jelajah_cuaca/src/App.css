@@ -1,0 +1,28 @@
+/* App.css */
+
+.app-header {
+  background-color: #f3b36a83; /* Background color for the header */
+  padding: 15px 20px; /* Padding for spacing */
+  text-align: center; /* Center align the text */
+  border-bottom: 1px solid #ddd; /* Optional border for separation */
+  position: sticky; /* Sticky header */
+  top: 0; /* Align header to the top */
+  width: 100%; /* Make header full width */
+  z-index: 1000; /* Make sure header stays on top */
+}
+
+.app-title {
+  font-size: 24px; /* Font size for the title */
+  margin: 0; /* Remove default margin */
+}
+
+/* Additional global styling for the app */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}

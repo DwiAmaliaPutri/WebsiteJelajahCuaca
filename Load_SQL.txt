@@ -1,0 +1,58 @@
+--- Cara masuk ke mysql di VM
+1. Masuk ke folder di server
+2. "sudo /etc/init.d/mysql start" untuk memulai mysql, "sudo /etc/init.d/mysql status" untuk memeriksa apakah layanan sedang aktif atau tidak
+2. Masuk ke mysql dengan memasukkan mysql -u username -p --> ketikan mysql -u root -p
+3. buat database
+
+---Cara masuk ke mysql di Terminal VS Code
+1. Buka terminal VSCode
+2. Masuk ke directory mysql dengan ketikan "cd D:\XAMPP\mysql\bin"
+3. Aktifkan mysql di laptop, dengan start MySQL di XAMPP
+4. Aktifkan MySQL dengan ketikan ".\mysql -u root -p", jika ada masukkan password atau melewati dengan enter
+# dengan menambahkan .\ di depannya untuk menunjukkan bahwa Anda ingin menjalankan perintah dari direktori saat ini
+5. buat database
+
+---Cara masuk ke mysql di Terminal Windows
+1. Buka terminal di directory mysql dengan mencari directory mysql kemudian pada path ketikan cmd
+2. Aktifkan mysql di laptop, dengan start MySQL di XAMPP
+4. Aktifkan MySQL dengan ketikan "mysql -u root -p", jika ada masukkan password atau melewati dengan enter
+5. buat database
+
+Di windows dapat menjalankan langsung mysql tanpa mencari directory
+Tambahkan D:\XAMPP\mysql\bin ke PATH:
+1. Klik kanan pada This PC (atau My Computer) dan pilih Properties.
+2. Klik Advanced system settings.
+3. Klik tombol Environment Variables.
+4. Di bawah System Variables, cari variabel Path dan klik Edit.
+5. Klik New dan masukkan jalur "D:\XAMPP\mysql\bin"
+6. Restart Terminal
+
+#### Membuat database
+CREATE DATABASE nama_database; --> CREATE DATABASE perjalanan_wisata;
+### Memeriksa database yang sudah dibuat
+SHOW DATABASES;
+### Mengunakan database yang akan dimanipulasi
+USE nama_database; --> USE perjalanan_wisata;
+### Menambahkan Tabel ke dalam Database
+CREATE TABLE user (
+    id_user int primary_key auto increment,
+    username varchar(1000),
+    email varchar(500),
+    password varchar(200));
+
+CREATE TABLE destination (
+    id_destination int primary_key auto increment,
+    destination_name varchar(1000),
+    city varchar(500),
+    open_time time,
+    close_time time,
+    latitude double,
+    longitude double);
+
+CREATE TABLE trip (
+    id_trip int primary_key auto increment,
+    foreign key(id_user) references user(id_user),
+    foreign key(id_destination) references destination(id_destination),
+    start_date date,
+    end_date date);
+ 

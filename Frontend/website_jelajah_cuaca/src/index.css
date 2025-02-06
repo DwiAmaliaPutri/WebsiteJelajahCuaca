@@ -1,0 +1,32 @@
+/* index.css */
+
+/* Reset gaya bawaan browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Gaya untuk seluruh halaman */
+body {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Contoh gaya global lainnya */
+a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
