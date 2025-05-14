@@ -4,7 +4,7 @@ import requests
 import bcrypt
 import mysql.connector
 import jwt
-SECRET_KEY = 'Dap_130820004fhuefhfe9ua'
+SECRET_KEY = 'your_secret_key'
 import datetime
 
 app = Flask(__name__)
